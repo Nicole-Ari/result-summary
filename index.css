@@ -1,0 +1,183 @@
+@font-face {
+  font-family: "HakenGrotesk-Bold";
+  src: url("assets/fonts/static/HankenGrotesk-Bold.ttf");
+}
+@font-face {
+  font-family: "HakenGrotesk-ExtraBold";
+  src: url("assets/fonts/static/HankenGrotesk-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "HakenGrotesk-Medium";
+  src: url("assets/fonts/static/HankenGrotesk-Medium.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --background-gradient: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+}
+body {
+  background-color: hsl(221, 100%, 96%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 18px;
+  font-family: "HakenGrotesk-Medium", sans-serif;
+}
+main {
+  background-color: #fff;
+
+  display: flex;
+  min-height: 45vh;
+  border-radius: 2rem;
+  width: 600px;
+  transition: width 0.3s ease-in-out, display 0.1s ease-in-out;
+}
+.left-container,
+.right-container {
+  flex: 1;
+}
+.left-container {
+  background: var(--background-gradient);
+  padding: 2rem 3rem;
+  border-radius: 2rem 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  color: #fff;
+  text-align: center;
+  flex: 1;
+}
+.left-container .title {
+  color: hsl(221, 100%, 96%, 0.8);
+  font-family: "HakenGrotesk-Bold", sans-serif;
+}
+.left-container .points {
+  background: linear-gradient(
+    to bottom,
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  height: fit-content;
+  border-radius: 100%;
+  padding: 2rem 3rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.left-container .points h1 {
+  font-size: 3rem;
+  font-family: HakenGrotesk-Bold;
+}
+.left-container .points small {
+  font-size: 0.8rem;
+
+  color: hsl(221, 100%, 96%, 0.4);
+}
+.left-container > h2 {
+  font-family: "HakenGrotesk-ExtraBold", sans-serif;
+  font-weight: 500;
+}
+.left-container > p {
+  font-size: 1rem;
+  color: hsl(221, 100%, 96%, 0.6);
+}
+.right-container {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.right-container h2 {
+  font-family: "HakenGrotesk-Bold", sans-serif;
+}
+.right-container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: gray;
+  font-family: "HakenGrotesk-Bold", sans-serif;
+}
+
+.right-container .content .item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 0.7rem;
+  font-size: 14px;
+}
+.right-container .content span {
+  color: hsl(224, 30%, 27%);
+  font-weight: 700;
+}
+.right-container .content .label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.right-container .content .item:nth-child(1) {
+  background-color: rgba(255, 87, 87, 0.05);
+}
+.right-container .content .item:nth-child(1) .label {
+  color: hsl(0, 100%, 67%);
+}
+.right-container .content .item:nth-child(2) {
+  background-color: hsla(39, 100%, 56%, 0.05);
+}
+.right-container .content .item:nth-child(2) .label {
+  color: hsl(39, 100%, 56%);
+}
+.right-container .content .item:nth-child(3) {
+  background-color: hsl(166, 100%, 37%, 0.05);
+}
+.right-container .content .item:nth-child(3) .label {
+  color: hsl(166, 100%, 37%);
+}
+.right-container .content .item:nth-child(4) {
+  background-color: hsl(234, 85%, 45%, 0.05);
+}
+.right-container .content .item:nth-child(4) .label {
+  color: hsl(234, 85%, 45%);
+}
+
+.right-container button {
+  background: hsl(224, 30%, 27%);
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0.8rem 1rem;
+  border-radius: 2rem;
+}
+.right-container button:hover {
+  background: var(--background-gradient);
+  cursor: pointer;
+}
+@media screen and (max-width: 645px) {
+  main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 560px) {
+  main {
+    flex-direction: column;
+    border-radius: 0;
+    width: 100%;
+  }
+  .left-container {
+    border-radius: 0 0 2rem 2rem;
+  }
+}
